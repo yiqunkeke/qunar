@@ -1,0 +1,868 @@
+{
+  "ret": true,
+  "data": {
+    "AllClassic": [
+      {
+        "id": "1",
+        "name": "全部分类",
+        "icon": "https://img1.qunarzz.com/piao/fusion/1509/9d/0ee9e4808773f.png",
+        "num": "663",
+        "children": []
+      },
+      {
+        "id": "2",
+        "name": "自然风光",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/f8/799d67d22404c602.png",
+        "num": "149",
+        "children": [
+          {
+            "id": "21",
+            "name": "全部自然风光",
+            "num": "149"
+          },
+          {
+            "id": "22",
+            "name": "山川",
+            "num": "51"
+          },
+          {
+            "id": "23",
+            "name": "江河湖泊",
+            "num": "31"
+          },
+          {
+            "id": "24",
+            "name": "地质景观",
+            "num": "24"
+          },
+          {
+            "id": "25",
+            "name": "瀑布",
+            "num": "17"
+          },
+          {
+            "id": "26",
+            "name": "峡谷",
+            "num": "17"
+          },
+          {
+            "id": "27",
+            "name": "海滨海岛",
+            "num": "14"
+          },
+          {
+            "id": "28",
+            "name": "溶洞",
+            "num": "9"
+          },
+          {
+            "id": "29",
+            "name": "森林",
+            "num": "7"
+          },
+          {
+            "id": "210",
+            "name": "水库",
+            "num": "2"
+          },
+          {
+            "id": "211",
+            "name": "湿地",
+            "num": "2"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "文化古迹",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/73/0c8e23368dceac02.png",
+        "num": "114",
+        "children": [
+          {
+            "id": "31",
+            "name": "全部文化古迹",
+            "num": "114"
+          },
+          {
+            "id": "32",
+            "name": "古建筑",
+            "num": "38"
+          },
+          {
+            "id": "33",
+            "name": "寺庙",
+            "num": "27"
+          },
+          {
+            "id": "34",
+            "name": "遗址",
+            "num": "15"
+          },
+          {
+            "id": "35",
+            "name": "古镇",
+            "num": "11"
+          },
+          {
+            "id": "36",
+            "name": "陵墓陵园",
+            "num": "9"
+          },
+          {
+            "id": "37",
+            "name": "故居",
+            "num": "4"
+          },
+          {
+            "id": "38",
+            "name": "古街",
+            "num": "4"
+          },
+          {
+            "id": "39",
+            "name": "渔村",
+            "num": "3"
+          },
+          {
+            "id": "310",
+            "name": "世界遗产",
+            "num": "2"
+          },
+          {
+            "id": "311",
+            "name": "石窟",
+            "num": "1"
+          },
+          {
+            "id": "312",
+            "name": "水乡",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "农家度假",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/a5/9254bfcb77931f02.png",
+        "num": "76",
+        "children": [
+          {
+            "id": "41",
+            "name": "全部农家度假",
+            "num": "76"
+          },
+          {
+            "id": "42",
+            "name": "农家乐",
+            "num": "32"
+          },
+          {
+            "id": "43",
+            "name": "采摘",
+            "num": "22"
+          },
+          {
+            "id": "44",
+            "name": "生态园",
+            "num": "13"
+          },
+          {
+            "id": "45",
+            "name": "庄园",
+            "num": "7"
+          },
+          {
+            "id": "46",
+            "name": "度假村",
+            "num": "5"
+          },
+          {
+            "id": "47",
+            "name": "钓鱼",
+            "num": "3"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "游乐场",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/3e/d07407699d56c202.png",
+        "num": "64",
+        "children": [
+          {
+            "id": "51",
+            "name": "全部游乐场",
+            "num": "64"
+          },
+          {
+            "id": "52",
+            "name": "主题乐园",
+            "num": "26"
+          },
+          {
+            "id": "53",
+            "name": "儿童乐园",
+            "num": "23"
+          },
+          {
+            "id": "54",
+            "name": "水上乐园",
+            "num": "13"
+          },
+          {
+            "id": "55",
+            "name": "摩天轮",
+            "num": "2"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "户外拓展",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1509/1e/bee608077e1927.png",
+        "num": "60",
+        "children": [
+          {
+            "id": "61",
+            "name": "全部户外拓展",
+            "num": "60"
+          },
+          {
+            "id": "62",
+            "name": "真人CS",
+            "num": "27"
+          },
+          {
+            "id": "63",
+            "name": "拓展",
+            "num": "13"
+          },
+          {
+            "id": "64",
+            "name": "空中飞行",
+            "num": "7"
+          },
+          {
+            "id": "65",
+            "name": "攀岩",
+            "num": "2"
+          },
+          {
+            "id": "66",
+            "name": "骑马",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "name": "展馆",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/de/8b3631887808e202.png",
+        "num": "56",
+        "children": [
+          {
+            "id": "71",
+            "name": "全部展馆",
+            "num": "56"
+          },
+          {
+            "id": "72",
+            "name": "博物馆",
+            "num": "28"
+          },
+          {
+            "id": "73",
+            "name": "展览馆",
+            "num": "17"
+          },
+          {
+            "id": "74",
+            "name": "人文艺术馆",
+            "num": "5"
+          },
+          {
+            "id": "75",
+            "name": "纪念馆",
+            "num": "4"
+          },
+          {
+            "id": "76",
+            "name": "蜡像馆",
+            "num": "1"
+          },
+          {
+            "id": "77",
+            "name": "科技馆",
+            "num": "4"
+          },
+          {
+            "id": "78",
+            "name": "天文馆",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "name": "公园",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/70/a7a71fb69cc7d902.png",
+        "num": "52",
+        "children": [
+          {
+            "id": "81",
+            "name": "全部公园",
+            "num": "52"
+          },
+          {
+            "id": "82",
+            "name": "森林公园",
+            "num": "9"
+          },
+          {
+            "id": "83",
+            "name": "主题公园",
+            "num": "8"
+          },
+          {
+            "id": "84",
+            "name": "地质公园",
+            "num": "6"
+          },
+          {
+            "id": "85",
+            "name": "湿地公园",
+            "num": "4"
+          },
+          {
+            "id": "86",
+            "name": "园林",
+            "num": "4"
+          },
+          {
+            "id": "87",
+            "name": "民俗风情园",
+            "num": "2"
+          },
+          {
+            "id": "88",
+            "name": "博览园",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "name": "城市观光",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/d5/59dbd6c5a28aac02.png",
+        "num": "51",
+        "children": [
+          {
+            "id": "91",
+            "name": "全部城市观光",
+            "num": "51"
+          },
+          {
+            "id": "92",
+            "name": "城市标志建筑",
+            "num": "6"
+          },
+          {
+            "id": "93",
+            "name": "广场",
+            "num": "6"
+          },
+          {
+            "id": "94",
+            "name": "码头",
+            "num": "2"
+          },
+          {
+            "id": "95",
+            "name": "步行街",
+            "num": "2"
+          },
+          {
+            "id": "96",
+            "name": "大学",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "name": "水上玩乐",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/88/081697df39c9f802.png",
+        "num": "47",
+        "children": [
+          {
+            "id": "101",
+            "name": "全部水上玩乐",
+            "num": "47"
+          },
+          {
+            "id": "102",
+            "name": "漂流",
+            "num": "41"
+          },
+          {
+            "id": "103",
+            "name": "水上项目",
+            "num": "3"
+          },
+          {
+            "id": "104",
+            "name": "潜水",
+            "num": "1"
+          },
+          {
+            "id": "105",
+            "name": "步行街",
+            "num": "2"
+          },
+          {
+            "id": "106",
+            "name": "大学",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "name": "室内娱乐",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/d5/2a3ec877befef902.png",
+        "num": "21",
+        "children": [
+          {
+            "id": "111",
+            "name": "全部室内娱乐",
+            "num": "21"
+          },
+          {
+            "id": "112",
+            "name": "密室逃脱",
+            "num": "20"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "name": "游船",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/2c/d4a2b394eecbeb02.png",
+        "num": "18",
+        "children": [
+          {
+            "id": "121",
+            "name": "全部游船",
+            "num": "18"
+          },
+          {
+            "id": "122",
+            "name": "游艇",
+            "num": "6"
+          },
+          {
+            "id": "123",
+            "name": "游轮",
+            "num": "5"
+          },
+          {
+            "id": "124",
+            "name": "竹筏",
+            "num": "1"
+          },
+          {
+            "id": "125",
+            "name": "帆船",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "name": "体验馆",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/15/8883a00c917e5202.png",
+        "num": "17",
+        "children": [
+          {
+            "id": "131",
+            "name": "全部体验馆",
+            "num": "17"
+          },
+          {
+            "id": "132",
+            "name": "3D、4D、5D艺术体验馆",
+            "num": "7"
+          },
+          {
+            "id": "133",
+            "name": "儿童体验馆",
+            "num": "4"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "name": "交通",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/15/d94c0a3f16a48a02.png",
+        "num": "14",
+        "children": [
+          {
+            "id": "141",
+            "name": "全部交通",
+            "num": "14"
+          },
+          {
+            "id": "142",
+            "name": "租车",
+            "num": "1"
+          },
+          {
+            "id": "143",
+            "name": "索道",
+            "num": "1"
+          },
+          {
+            "id": "144",
+            "name": "直通车",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "name": "温泉",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/86/95cb8117ad91a402.png",
+        "num": "9",
+        "children": [
+          {
+            "id": "151",
+            "name": "全部温泉",
+            "num": "9"
+          },
+          {
+            "id": "152",
+            "name": "露天",
+            "num": "5"
+          },
+          {
+            "id": "153",
+            "name": "室内",
+            "num": "2"
+          },
+          {
+            "id": "154",
+            "name": "深层矿泉",
+            "num": "2"
+          },
+          {
+            "id": "155",
+            "name": "私汤",
+            "num": "1"
+          },
+          {
+            "id": "156",
+            "name": "日式",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "name": "运动健身",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/3e/72d2396d47131702.png",
+        "num": "7",
+        "children": [
+          {
+            "id": "161",
+            "name": "全部运动健身",
+            "num": "7"
+          },
+          {
+            "id": "162",
+            "name": "滑雪",
+            "num": "2"
+          },
+          {
+            "id": "163",
+            "name": "游泳",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "name": "餐饮",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/ce/e06a995a69d60702.png",
+        "num": "6",
+        "children": [
+          {
+            "id": "171",
+            "name": "全部餐饮",
+            "num": "6"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "name": "海洋馆",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/72/494d8f9690e0ea02.png",
+        "num": "5",
+        "children": [
+          {
+            "id": "181",
+            "name": "全部海洋馆",
+            "num": "5"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "name": "演出",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/e6/f8a210e488ba7602.png",
+        "num": "5",
+        "children": [
+          {
+            "id": "191",
+            "name": "全部演出",
+            "num": "5"
+          },
+          {
+            "id": "192",
+            "name": "景区演出",
+            "num": "3"
+          },
+          {
+            "id": "193",
+            "name": "话剧歌剧",
+            "num": "1"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "name": "植物园",
+        "icon": "https://imgs.qunarzz.com/piao/fusion/1608/16/165a69fea0cc0502.png",
+        "num": "3",
+        "children": [
+          {
+            "id": "171",
+            "name": "全部植物园",
+            "num": "3"
+          }
+        ]
+      }
+    ],
+    "ticketList": [
+      {
+        "id": "0001",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/201405/27/8211cadd5d9fefeaa044c5b7eefc695d.jpg_110x110_b2eaa892.jpg",
+        "tag": "随买随用",
+        "title": "千岛湖(5A)",
+        "starLevel": "80%",
+        "commentsNum": "7324",
+        "lowestPrice": "23",
+        "location": "淳安县",
+        "sightTag": [ "赠券", "必游景点", "江河湖泊排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "千岛湖——中心湖成人门船票",
+            "ticketsPrice": "205"
+          },
+          {
+            "ticketsName": "千岛湖——中心湖优惠人群门船票",
+            "ticketsPrice": "130"
+          }
+        ]
+      },
+      {
+        "id": "0002",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1809/8e/8e61ee146113f2f7a3.img.jpg_110x110_0eaa0f86.jpg",
+        "tag": "",
+        "title": "宋城千古情",
+        "starLevel": "60%",
+        "commentsNum": "16491",
+        "lowestPrice": "0.1",
+        "location": "西湖区",
+        "sightTag": [ "话剧歌剧", "庙会", "话剧歌剧排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "宋城+《宋城千古情》成人票",
+            "ticketsPrice": "290"
+          },
+          {
+            "ticketsName": "宋城+宋城千古情电子票全国大学生通用",
+            "ticketsPrice": "200"
+          }
+        ]
+      },
+      {
+        "id": "0003",
+        "imgUrl": "https://imgs.qunarzz.com/wugc/p3/201206/02/45e5e7cf0c1ee5b393835fbb.jpg_110x110_2c92c35e.jpg",
+        "tag": "明日可订",
+        "title": "西溪国家湿地公园(5A)",
+        "starLevel": "30%",
+        "commentsNum": "13804",
+        "lowestPrice": "138",
+        "location": "西湖区",
+        "sightTag": [ "必游景点", "庙会", "湿地公园排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "西溪湿地门车船联票（龙舌嘴入口）",
+            "ticketsPrice": "120"
+          },
+          {
+            "ticketsName": "西溪湿地门船联票（周家村入口）",
+            "ticketsPrice": "120"
+          }
+        ]
+      },
+      {
+        "id": "0004",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1603/ae/aecef86d7655873f90.water.jpg_110x110_1f7d29ee.jpg",
+        "tag": "明日可订",
+        "title": "杭州野生动物世界(4A)",
+        "starLevel": "80%",
+        "commentsNum": "5603",
+        "lowestPrice": "170",
+        "location": "富阳市",
+        "sightTag": [ "必游景点", "溜娃儿", "动物园排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "杭州野生动物世界成人票",
+            "ticketsPrice": "210"
+          },
+          {
+            "ticketsName": "杭州野生动物世界大学生票",
+            "ticketsPrice": "170"
+          }
+        ]
+      },
+      {
+        "id": "0005",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/201212/18/f195032e85740a4b93835fbb.jpg_110x110_030dfacc.jpg",
+        "tag": "明日可订",
+        "title": "杭州海底世界(4A)",
+        "starLevel": "10%",
+        "commentsNum": "3022",
+        "lowestPrice": "115",
+        "location": "西湖区",
+        "sightTag": [ "必游景点", "溜娃儿", "海洋馆排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "杭州海底世界成人票",
+            "ticketsPrice": "115"
+          },
+          {
+            "ticketsName": "杭州动物园+杭州海底世界两点联票",
+            "ticketsPrice": "120"
+          }
+        ]
+      },
+      {
+        "id": "0006",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1809/6b/6b0d71ae741a583da3.img.jpg_110x110_c4aad335.jpg",
+        "tag": "明日可订",
+        "title": "杭州乐园(4A)",
+        "starLevel": "100%",
+        "commentsNum": "5283",
+        "lowestPrice": "120",
+        "location": "萧山区",
+        "sightTag": [ "必游景点", "娱乐先锋", "主题公园排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "【当天可订】杭州乐园成人票（刷身份证入园）",
+            "ticketsPrice": "190"
+          },
+          {
+            "ticketsName": "杭州乐园景区成人票+杭州海底世界两点联票",
+            "ticketsPrice": "160"
+          }
+        ]
+      },
+      {
+        "id": "0007",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1505/95/95db58d0da425616.water.jpg_110x110_191bbaed.jpg",
+        "tag": "随买随用",
+        "title": "杭州动物园(4A)",
+        "starLevel": "70%",
+        "commentsNum": "4052",
+        "lowestPrice": "20",
+        "location": "西湖区",
+        "sightTag": [ "必游景点", "游乐场", "动物园排名第二" ],
+        "tickets": [
+          {
+            "ticketsName": "杭州动物园成人票",
+            "ticketsPrice": "20"
+          },
+          {
+            "ticketsName": "杭州动物园双人票",
+            "ticketsPrice": "40"
+          }
+        ]
+      },
+      {
+        "id": "0008",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1703/e3/e3d2c4a62fdc54aaa3.img.jpg_110x110_2652d4d8.jpg",
+        "tag": "随买随用",
+        "title": "灵隐寺",
+        "starLevel": "100%",
+        "commentsNum": "926",
+        "lowestPrice": "45",
+        "location": "杭州",
+        "sightTag": [ "必游景点", "寺庙排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "西湖-灵隐飞来峰（不含灵隐寺）成人票",
+            "ticketsPrice": "45"
+          },
+          {
+            "ticketsName": "灵隐飞来峰门票（不含灵隐寺）+北高峰往返索道成人票",
+            "ticketsPrice": "90"
+          }
+        ]
+      },
+      {
+        "id": "0009",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1603/57/57ee153a3441d35190.water.jpg_110x110_dcf86255.jpg",
+        "tag": "随买随用",
+        "title": "杭州飞来峰",
+        "starLevel": "100%",
+        "commentsNum": "9792",
+        "lowestPrice": "45",
+        "location": "西湖",
+        "sightTag": [ "必游景点", "祈福许愿", "山川排名第一" ],
+        "tickets": [
+          {
+            "ticketsName": "西湖-灵隐飞来峰（不含灵隐寺）成人票",
+            "ticketsPrice": "45"
+          },
+          {
+            "ticketsName": "灵隐飞来峰门票（不含灵隐寺）+北高峰往返索道成人票",
+            "ticketsPrice": "90"
+          }
+        ]
+      },
+      {
+        "id": "00010",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1603/33/337b483a8f5e76fb90.water.jpg_110x110_7a5b5d9d.jpg",
+        "tag": "随买随用",
+        "title": "瑶琳仙境(4A)",
+        "starLevel": "100%",
+        "commentsNum": "1882",
+        "lowestPrice": "108.6",
+        "location": "桐庐县",
+        "sightTag": [ "必游景点"],
+        "tickets": [
+          {
+            "ticketsName": "瑶琳洞成人票",
+            "ticketsPrice": "110"
+          },
+          {
+            "ticketsName": "瑶琳洞亲子票（1大1小）",
+            "ticketsPrice": "170"
+          }
+        ]
+      }
+    ]
+  }
+}

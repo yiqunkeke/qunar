@@ -1,0 +1,402 @@
+#1 如何初始化一个vue工程项目？
+答案：step1: npm install --global vue-cli   //这一步是全局安装vue-cli脚手架工具，我们使用这个脚手架工具来搭建一个vue的工程
+step2: vue init webpack travel              //安装好vue-cli后，我们才可以使用vue init webpack命令来初始化一个vue项目
+step3: cd travel                            //进入项目目录
+step4: npm install                          //安装项目依赖（在vue项目当中，我们会用到很多第三方依赖，使用这个命令，就可以安装package.json文件对应的所有依赖文件，装好以后，所有的依赖，会装在node_modules目录下方）
+step5: npm run dev                          //启动项目
+
+#2 如何在Vue项目中，使用stylus?
+step1: npm install stylus --save   //安装stylus 到dependencies
+step2: npm install stylus-loader --save  //安装stylus-load 到dependencies
+
+#3 如何在一个父组件中引入一个子组件？
+step1: import HomeHeader from './components/Header'   //通过import引入
+step2: components:{ HomeHeader }    //单文件组件是局部组件，需要通过components进行声明
+
+#4 在移动端项目中，rem 和 px 如何进行转换？
+提示：
+1）rem是相对于根元素<html>，这样就意味着，我们只需要在根元素确定一个参考值，这个参考值设置为多少，完全可以根据您自己的需求来定。
+2）rem是CSS3中新增加的一个单位值，他和em单位一样，都是一个相对单位。不同的是em是相对于元素的父元素的font-size进行计算；rem是相对于根元素html的font-size进行计算。
+1rem = html font-size = 50px
+
+#5 flex布局基础知识点：
+http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+
+#6 在项目中引用iconfont图标字体,都需要用到哪些文件？
+答案：所有的字体文件（4个：.eot, .svg, .ttf, .woff）和一个iconfont.css文件
+注意，引入文件的时候，需要修改iconfont.css中字体文件引用的相对路径
+最后，在main.js入口文件当中，引入iconfont.css样式（import 'styles/iconfont.css'）
+
+代码优化：1）使用stylus定义全局变量   2）@代表src目录，可自定义styles代表styles目录
+#7 如何定义变量，并在stylus中使用呢？如何在样式文件中引入另一个stylus（.styl）文件？
+答案：在.styl文件当中定义变量：$bgColor = #00bcd4; $darkTextColor = #333;
+在样式当中引入其他的样式文件，不能直接使用import，需要在import前面加上@符号。使用@import '~styles/varibles.styl';
+注意，import前面必须要加上@符号，同时，路径最前面必须使用~；
+
+#8 如何给项目的styles目录创建一个别名，简化项目的引用路径？
+答案：修改build文件夹下的webpack.base.conf.js
+找到resolve--alias（别名项）,添加一个配置项即可
+注意，修改了任意的配置文件以后，我们都需要重新启动下我们的项目，重新运行下npm run dev，修改的配置项才会起作用
+
+#9 如何把本地的代码提交到线上？
+git add . //把代码提交到本地的缓冲区
+git commit -m 'xxx'  //把本地缓冲区的内容提交到本地的仓库
+git push  //把本地的改变提交到线上
+这三个命令一定要牢记于心。
+
+#10 在git码云上面新建好了一个分支，如何将本地代码切换到这个分支上进行代码开发？
+step1: git pull                             //Already up to date.  //
+step2: git checkout index-swiper(分支名字)  //Switched to a new branch 'index-swiper'
+                                            //Branch 'index-swiper' set up to track remote branch 'index-swiper' from 'orinin'
+step3: git status                           //On branch index-swiper
+                                            //Your branch is up to date with 'origin/index-swiper'
+
+#11 如何在Vue项目中使用vue-awesome-swiper插件？
+提示：我们去github.com搜索vue-awesome-swiper插件，下方有安装和使用步骤：
+安装: npm install vue-awesome-swiper@2.6.7 --save
+使用：在main.js入口文件中：
+step1: import VueAwesomeSwiper from 'vue-awesome-swiper'      //使用import引入vue-awesome-swiper
+step2: import 'swiper/dist/css/swiper.css'                    //使用import引入样式
+step3: Vue.use(VueAwesomeSwiper)                             //使用Vue.use()方法，全局加载这个插件
+
+#12 如何使用css布局进行占位，避免出现页面抖动？
+原因：一开始，图片没有加载的时候，Swiper组件区域的高度是0，图片加载完了，才把高度撑开。所以会出现一个抖动。
+文案：给外层加一个div.wrapper,并设置以下样式：
+答案：1)overflow:hidden;
+        width:100%;
+        height:0;            //而如果在height:32%,这个比例并不是相对于宽度的，而是相对于父级元素的高度
+        padding-bottom:32%; //这个值是区域的宽高比。这个比例，是相对于宽度width的。
+
+        2)overflow:hidden;
+          width:25%;
+          height:0;
+          padding-bottom:25%;
+原理：计算图片的或者区域的宽高比（高度/宽度），设置padding-bottom的值为那个比例
+
+#13 在单文件组件中，<style scoped>标签中，给第三方组件使用！important 覆盖样式不起作用，原因是什么？如何让覆盖样式起作用?
+答案：原因是：使用了scoped的style标签,里面的样式只对当前单文件组件中的样式起作用，并不能对第三方组件起作用。
+使用 >>> 穿透scoped：在插件最外层套用一个div,定义class='wrapper',然后在<style scoped>标签中写：.wrapper >>> .className { color: red !important;}
+这样，样式就可以穿透进入所有子组件，进行样式覆盖了。
+
+#14 --save，--save-dev 什么意思？
+答案：将安装包信息将加入到dependencies（生产阶段的依赖）
+package.json 文件的 dependencies 字段："dependencies": { "gulp": "^3.9.1"}
+--save-dev 安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它
+package.json 文件的 devDependencies字段："devDependencies": { "gulp": "^3.9.1"}
+
+#15 已经写好的一个分支，如何合并到master 分支上去？
+答案：step1: git checkout master                   //先使用git checkout 命令切换到master主分支
+step2:git merge origin/index-swiper               //再使用git merge 命令合并
+step3:git push                                    //使用git push 命令推到线上git仓库
+
+
+#16 如何使用stylus实现：当文字溢出时，出现‘...’？
+答案：step1: 新建一个stylus文件（后缀为.styl），定义一个ellipse(){
+                              overflow: hidden
+                              white-space: nowrap
+                              text-overflow: ellipsis
+                              }
+      step2: 在<style scoped>标签中，使用@import引入该.styl文件
+      step3: 在class中直接调用该方法：ellipse()
+
+#17 如何把一个数组拆分成一个二维数组？
+提示：使用计算属性
+答案：computed: {
+       pages () {
+         const pages = []
+         this.iconList.forEach(function (item, index) {
+           const page = Math.floor(index / 8)
+           if (!pages[page]) {
+             pages[page] = []
+           }
+           pages[page].push(item)
+         })
+         return pages
+       }
+     }
+
+#18 Ajax获取动态数据？
+答案：使用vue官方推荐的axios，它可以实现跨平台的数据的请求。
+安装axios: npm install axios --save
+
+#19 在Vue项目中，只有static文件夹下的内容可以通过浏览器中的路径来访问。
+需要在gitignore 加入一项，忽略static下的mock，不提交到线上
+
+#20 如何在本地模拟后台json数据？      转发机制 ----->proxy代理
+答案：我们可以在static文件夹下面，新建一个mock文件夹来存放我们要从后台请求的json格式的文件。
+然后我们可以在写ajax请求的时候，请求‘/static/mock/xxx.json’,
+但是这样会带来一个新的问题，我们进行完代码开发，在最后上线的时候再去修改这个请求的地址是有风险的，
+为了避免这个风险，我们可以修改config目录下的，index.js，通过修改proxyTable: {
+                                             '/api': {
+                                               target: 'http://localhost:8080',
+                                               pathRewrite: {
+                                                 '^/api': '/static/mock'
+                                               }
+                                             }
+                                           }
+ 注意，修改了任意的配置文件以后，我们都需要重新启动下我们的项目，重新运行下npm run dev，修改的配置项才会起作用。
+
+#21 如何在Vue项目中使用better-scroll插件？
+提示：我们去github.com搜索better-scroll插件，下方有安装和使用步骤：
+安装: npm install better-scroll --save
+使用：
+step1: import Bscroll from 'better-scroll'
+step2: mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  }
+
+#22 当给一个元素绑定@click事件时，函数默认接收一个参数e，表示绑定事件的当前元素。
+如何获取当前元素的文本内容？
+答案：可以通过 e.target.innerText 获取文本内容
+可以通过 e.touches[0].clientY 获取元素到最顶部的高度
+
+#23 移动端的手指滑动事件有哪些？
+答案：touchStart、touchMove、touchEnd这三个
+
+#24 当我们用for(let i in object)遍历一个对象时，i返回的是什么？
+答案： for…in循环出的是键名(key)
+例子：var obj = {a:1, b:2, c:3};
+   for (var prop in obj) {
+     console.log("obj." + prop + " = " + obj[prop]);  // obj[prop]是对象内容
+   }
+   // Output:
+   // "obj.a = 1"
+   // "obj.b = 2"
+   // "obj.c = 3"
+结论：推荐在循环对象属性的时候，使用for…in,在遍历数组的时候的时候使用for…of。
+
+#25 当我们用for(let i in arr)遍历一个数组时，i返回的是什么？
+答案： for…in循环出的是下标(index)
+例子：var arr = [44,9,11];
+   for (var prop in arr) {
+     console.log(prop);         //prop是下标
+     console.log(arr[prop]);    //arr[prop]是数组内容
+   }
+   // Output:
+   // 0
+   // 1
+   // 2
+
+#26 for…of不能循环普通的对象，需要通过和Object.keys()搭配使用
+例子：var obj = {a:1, b:2, c:3 };
+   for(var key of Object.keys(obj)){
+     console.info(key + ':', obj[key])
+   }
+   //  a: 1
+   //  b: 2
+   //  c: 3
+
+总结：无论是对象还是数组，都可以使用obj[key]或者arr[index]通过key键名或者index下标来访问对象属性的值或者数组里的内容
+https://blog.csdn.net/x550392236/article/details/79541751
+
+#27 箭头函数和普通函数有什么区别？
+答案：1.不邦定this ：在箭头函数出现之前，每个新定义的函数都有其自己的 this 值
+
+(参数1, 参数2, …, 参数N) => { 函数声明 }
+(参数1, 参数2, …, 参数N) => 表达式（单一）
+//相当于：(参数1, 参数2, …, 参数N) =>{ return 表达式; }
+
+// 当只有一个参数时，圆括号是可选的：
+(单一参数) => {函数声明}
+单一参数 => {函数声明}
+
+// 没有参数的函数应该写成一对圆括号。
+() => {函数声明}
+
+#28 indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+如果要检索的字符串值没有出现，则该方法返回 -1。
+
+#29 如何使用vuex实现数据共享？
+安装：step1: npm install vuex --save
+step2: 单独的src目录下创建store文件夹
+step3: 在store文件夹中创建index.js
+step4: 在index.js中。我们需要：
+                                import Vue from 'vue'
+                                import Vuex from 'vuex'
+
+                                Vue.use(Vuex)
+
+                                const store = new Vuex.Store({
+                                  state: {
+                                    city: '北京'
+                                  }
+                                })
+
+                                export default store
+step5: 在main.js入口文件中。我们需要
+                                    import store from './store'
+                                    new Vue({
+                                      el: '#app',
+                                      router,
+                                      store,  //把store传递进来
+                                      components: { App },
+                                      template: '<App/>'
+                                    })
+
+#30 下一步，子组件应该怎么使用store里state部分的数据呢？
+答案：{{this.$store.state.city}}
+
+#31 为什么每一个子组件都能用这个this.$store呢？
+答案：是因为我们在创建根实例的时候，把store传递进去了，紧接着，vuex创建的这个store会被派发到每一个子组件里面，
+所以在每一个子组件里面，我们都可以用this.$store获取到这个store
+
+#32 除了访问store里面的state里的数据，我们如何去改变state里数据呢？
+答案：step1: 组件通过dispatch()派发事件的方法去调用actions
+step2: actions 通过commit()调用mutations
+step3: mutations 去改变state里面的公用数据
+
+我们也可以省略到中间的actions，直接让组件使用commit调用mutations去修改state里面的数据
+
+actions接受两个参数，一个是ctx，一个是外部传递过来的数据city
+mutations接受两个参数，一个是state, 一个是外部传递过来的数据city
+
+#33 在网页上，做页面的跳转有哪两个方式？
+答案：一种是通过<a>标签的方式做跳转，另一种是通过js:window.location.href这种形式
+
+#34 在Vue中，实现页面的跳转有哪两个方式？
+答案：<router-link>创建a标签  和  编程式导航 router.push()
+this.$router.push({ path: '/' })
+
+编程式导航知识点：
+1）想要导航到不同的URL，则使用router.push方法。这个方法会向history栈添加一个新的记录，所以，当用户点击浏览器后退按钮时，则回到之前的URL。
+2）当你点击<router-link>时，这个方法会在内部调用，所以说，点击<router-link to='...'>等同于调用router.push(...)
+3）该方法的参数，可以是一个字符串路径，或者一个描述地址的对象：
+//字符串
+this.$router.push('home')
+//对象
+this.$router.push({path:'user/resetPwd'})
+//命名的路由
+this.$router.push({name:'user',params:{userId:123}})
+//带查询参数，变成/register?plan=private
+this.$router.push({path:'register',query:{plan:'private'}})
+
+注意：如果提供了path,params会被忽略，上述例子中的query并不属于这种情况。取而代之的是下面例子的做法，你需要提供路由的name或者手写完整的带参数的path:
+const userId = 123
+this.$router.push({name:'user',params:{userId}})     //      /user/123
+this.$router.push({path:`/user/${userId}`})          //      /user/123
+//下面的params不生效
+this.$router.push({path:'/user',params:{userId}})    //      /user
+同样的规则也适用于<router-link>组件的to属性
+
+this.$router.replace(location,onComplete?,onAbort?)
+跟router.push很像，唯一不同的是，它不同向history添加新记录，而是跟它的方法名一样，替换掉当前的history记录。
+
+this.$router.go(n)
+这个方法的参数是一个整数，意思是在history记录中向前或者后退多少步，类似window.history.go(n)
+例子：this.$router.go(1)   //在浏览器中前进一步，等同于history.forward()
+this.$router.go(-1)       //后退一步记录，等同于history.back()
+this.$router.go(3)        //前进3步记录
+
+#35 页面跳转的时候如何携带参数？
+答案：step1: @click="handleResetPwd(scope.row.userId)"          //传递一个实参给函数
+step2: handleResetPwd(id) {
+               this.$router.push({path:'user/resetPassword',query:{id:id}})     //跳转的时候，把参数携带到地址栏
+             },
+step3:data: function () {
+          return {
+            id:this.$route.query.id             //在跳转之后的页面，用this.$route.query.id来获取传递过来的参数
+          }
+        },
+step4: userResetPassword(this.id)  //  可以用这个参数了
+
+
+# vue router 如何传参？？？
+
+/*传参是前端经常需要用的一个操作，很多场景都会需要用到上个页面的参数，本文将会详细介绍vue router 是如何进行传参的，以及一些小细节问题。
+
+params、query是什么？
+params：/router1/:id ，/router1/123，/router1/789 ,这里的id叫做params
+query：/router1?id=123 ,/router1?id=456 ,这里的id叫做query。
+
+*/
+#36 vuex的高级使用和localStorage本地存储
+答案：html5中提供了一个api叫localStorage。它可以帮助我们实现类似cookie的内容，做到本地存储。它的api要比cookie更加简单
+
+mutations: {
+    changeCity (state, city) {
+      state.city = city
+      // 改变本地存储
+      localStorage.city = city
+    }
+  }
+-------
+  state: {
+      city: localStorage.city || '上海'
+    }
+
+注意：大家记着，当我们使用localStorage的时候，建议只要你用localStorage,就在外面包裹一层try...catch。
+如果用户关闭了本地存储这样的功能或者使用隐身模式，你使用localStorage有可能会导致浏览器直接抛出异常，你代码整个就运行不了了。
+为了避免这种问题，我们建议大家在外层加一层try catch
+
+let defaultCity = '上海'
+try {
+  if (localStorage.city) {
+    defaultCity = localStorage.city
+  }
+} catch (e) {}
+--------
+  state: {
+    city: defaultCity
+  },
+--------
+  // 改变本地存储
+        try {
+          localStorage.city = city
+        } catch (e) {}
+
+#37 vuex中访问state里面的数据：this.$store.state.city 不优美，如何优化？
+答案：import { mapState } from 'vuex'
+在计算属性computed: {
+  ...mapState({
+      currentCity: 'city'
+    })
+}
+
+'...'是展开运算符。意思是把state里面的city映射过来，叫做currentCity，并放在computed计算属性里，
+那么我们就可以使用this.currentCity来访问state里面的这个数据了。
+这样写代码就很简洁
+
+#38 vuex还自带了一个 mapMutations方法，如何使用？
+答案：import { mapMutations } from 'vuex'
+在methods: {
+  ...mapMutations(['changeCity'])
+}
+
+#39 vuex中的getter有什么用？
+答案：vuex中的 getter有点类似于组件中的computed计算属性
+import { mapGetters } from 'vuex'
+在computed: {
+  ...mapGetters(['doubleCity'])
+}
+那么我们就可以使用this.doubleCity来访问state里面计算以后的这个数据了。
+
+#40 module
+
+#41 如何使用keep-alive优化网页性能？
+答案：在app.vue中，使用<keep-alive><router-view/></keep-alive>
+注意，使用keep-alive时，会自动新增一个新的生命周期函数activated。
+我们可以使用activated生命周期函数和一个lastCity临时变量，来重新发送ajax请求（见Home.vue：当进入城市列表页面，当选择一个与上一个城市lastCity相同的时候，不会重新发ajax请求，如果不同，就会重新发送ajax）可以通过控制台network查看
+
+#42 如何发送ajax请求，同时携带参数？
+答案：axios.get('/api/index.json?city=' + this.city)
+
+#43 什么是函数里面的Arguments对象?
+答案：arguments是一个对应于 传递给函数的参数的 类数组 对象。
+arguments对象是所有（非箭头）函数中都可用的局部变量。你可以使用arguments对象在函数中引用函数的参数。arguments 对象只能在函数内使用。
+
+例如：如果一个函数传递了三个参数，可以使用以下方式引用它们：
+arguments[0]
+arguments[1]
+arguments[2]
+参数也可以被设置： arguments[1] = 'new value'
+
+注意:arguments对象不是一个Array。它类似于Array,但是除了length属性和索引元素之外没有任何Array属性。例如，它没有pop方法。但是它可以被转换为一个真正的Array
+
+#44 使用<router-link to='/detail'>标签，router会默认把这个标签渲染成一个a标签，那么就会改变字体的颜色等一些默认样式，有何办法？
+比如：
+
+
+
+
+
+
