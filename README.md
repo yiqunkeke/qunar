@@ -1,2 +1,2 @@
 # vue-basic
-qunaer app
+这是 vue2.5 开发去哪儿app
